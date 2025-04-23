@@ -35,6 +35,20 @@
          justify-content: space-between;
          gap: 20px;
         }
+
+/*carrousal*/
+.carousel-caption h4{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ff9200;
+}
+.carousel-caption button{
+    border: none;
+    background-color: #000000c2;
+    color: #f46a23;
+    padding: 10px;
+    border-radius: 20px;
+}
 /*Nav Bar*/
 .navbar-light .navbar-nav .nav-link {
     color: rgb(4 4 4);
@@ -66,7 +80,8 @@ footer .address{
     display: flex;
 }
 footer .address div{
-    width:33%;
+    width: 33.3%;
+    padding-left: 15px;
 }
 footer div.copyright{
     background: #090909;
@@ -102,8 +117,10 @@ hr {
 }
 .service-box img{
     width: 100%;
-    transform: rotateX(27deg) rotate3d(1, 1, 0, 18deg);
-    filter: drop-shadow(0 -6mm 4mm rgb(0, 0, 0, 0.7));
+    transform: rotateX(20deg) rotate3d(1, 1, 0, 21deg);
+    filter: drop-shadow(-6mm 4mm rgb(0, 0, 0, 0.5));
+    border-top-left-radius: 1em 1em;
+    border: 5px solid;
 }
 .service-box img:hover {
     filter: drop-shadow(30px 10px 4px rgb(0, 0, 0, 0.7));
@@ -114,3 +131,136 @@ h4 {
     font-size: 1.2rem;
     font-weight: 900;
 }
+.input-contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.input-contact input,.input-contact textarea{
+    width: 60%;
+}
+.input-button input{
+    border: 0px solid;
+    padding: 10px 10px;
+    background: #e86f21;
+}
+
+.input-button {
+    text-align: right;
+    margin-right: 10%;
+    border: 0px solid;
+    padding: 10px 10px;
+}
+/*contact*/
+#contact h1{
+    text-align: center;
+}
+.quick-links li::marker{
+    content: '\2023';
+    padding: 0px 11px 0px 0px;
+    font-size: 30px;
+    color: #2a44a5;
+}
+/*chat*/
+.open-button {
+    background-color: #55555500;
+    color: white;
+    padding: 30px 10px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 60px;
+    width: 0px;
+  }
+
+  .open-button img{
+    width:70px;
+  }
+  
+  /* The popup chat - hidden by default */
+  .wachat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width textarea */
+  .form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+  
+  /* When the textarea gets focus, do something */
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/send button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+  /*Media Quiries*/
+  @media (max-width: 767.98px) {
+    .top-bar {
+        display: block;
+    }
+    .top-bar a{
+        display: block;
+        width: 100%;
+        font-size: medium;
+        text-align: center;
+    }
+    .services-container,footer .address {
+        display: block;
+    }
+    footer .address div {
+        width: 100%;
+    }
+    .open-button {
+        padding: 30px 10px;
+        left: 0px;
+        width: 0px;
+    }
+    .form-container {
+        max-width: 270px;
+    }
+    .wachat-popup {
+        right: 60px;
+    }
+  }
